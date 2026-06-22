@@ -1359,7 +1359,7 @@ const D_AVATAR = D_IMG.avatar || 'app/avatar.png';
 
 /* ============ 顶栏：logo + 三页面菜单 + 头像 ============ */
 const D_PAGES = ['数据资产', '数据看板', '数据分析'];
-const D_PAGE_LINKS = { '数据资产': 'assets.html', '数据看板': 'boards.html', '数据分析': 'analysis.html' };
+const D_PAGE_LINKS = { '数据资产': 'index.html', '数据看板': 'boards.html', '数据分析': 'analysis.html' };
 function DHeader({ active, onNav, sticky }) {
   const [menuOpen, setMenuOpen] = useStateD(false);
   const [scrolled, setScrolled] = useStateD(false);
