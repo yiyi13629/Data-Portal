@@ -1023,7 +1023,7 @@ function BoardCardGroups({ groups, collapsed, toggleKey, onOpen, onFav }) {
                 React.createElement(Icon, { name: 'down', size: 13, style: { color: 'var(--g4)', transition: 'transform .16s', transform: sOpen ? 'none' : 'rotate(-90deg)' } }),
                 React.createElement('span', { style: { fontSize: 14, fontWeight: 600, color: 'var(--g2)' } }, s.sub),
                 React.createElement('span', { className: 'tnum', style: { fontSize: 12, color: 'var(--g5)' } }, '(' + s.items.length + ')')),
-              sOpen && React.createElement('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(272px, 1fr))', gap: 16 } },
+              sOpen && React.createElement('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(272px, 1fr))', gap: 20 } },
                 s.items.map((b) => React.createElement(BoardCardD, { key: b.id, b, onOpen, onFav }))));
           })));
     }));
@@ -1334,7 +1334,7 @@ function AnalysisPage({ toast }) {
                 <span style={{ fontSize: 17, fontWeight: 600, color: 'var(--ink)' }}>{g.cat}</span>
               </div>
               {/* 卡片网格：最小 280，撑满容器宽度自适应 */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 20 }}>
                 {g.tools.map((t) =>
               <AnalysisToolCard key={t.name} t={t} tone={g.tone} onGo={onGo} />
               )}
@@ -1535,7 +1535,7 @@ function AssetsBody({ onOpen, toast }) {
           <FilterBar scope={scope} setScope={setScope} theme={theme} setTheme={setTheme} view={view} setView={setView} counts={counts} bleed={22} rightSlot={<DSearch onSearch={setQ} />} />
           <div ref={scrollRef} onScroll={onScroll} className="hover-scroll" style={{ flex: 1, minHeight: 0, overflowY: 'auto', marginRight: -22, paddingRight: 22 }}>
             {view === 'card' ?
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 16 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: 20 }}>
                   {visible.map((a) => <AssetCard key={a.id} a={a} onOpen={onOpen} onFav={onFav} onAnalyze={onAnalyze} />)}
                 </div> :
           <React.Fragment>
